@@ -9,7 +9,7 @@ import "swiper/css/autoplay";
 import { AcfContext } from "../Page/Home";
 
 // Import required Swiper modules
-import { Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 export default function CareAndMaintenance() {
   const acfData = useContext(AcfContext);
@@ -20,7 +20,7 @@ export default function CareAndMaintenance() {
         <Swiper
           spaceBetween={10}
           loop={true}
-          slidesPerView={4}
+          slidesPerView={3}
           breakpoints={{
             500: {
               slidesPerView: 2,
@@ -40,12 +40,12 @@ export default function CareAndMaintenance() {
             clickable: true,
           }}
           //   navigation={true}
-          modules={[Autoplay]}
+          modules={[Pagination]}
           className="mySwiper"
         >
           {acfData?.care_maintenance_icons.map(
             (care_maintenance_icon, index) => (
-              <SwiperSlide key={index} className="swiper-slide ">
+              <SwiperSlide key={index} className="swiper-slide pb-14 ">
                 <div className="swiper-slide-container cursor-grab flex justify-center">
                   <img
                     src={care_maintenance_icon}

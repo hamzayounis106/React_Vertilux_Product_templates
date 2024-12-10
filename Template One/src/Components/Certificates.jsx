@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 import { AcfContext } from "../Page/Home";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 export default function Certificates() {
   const acfData = useContext(AcfContext);
@@ -17,7 +17,7 @@ export default function Certificates() {
         <Swiper
           spaceBetween={10}
           loop={true}
-          slidesPerView={4}
+          slidesPerView={3}
           breakpoints={{
             500: {
               slidesPerView: 2,
@@ -36,11 +36,11 @@ export default function Certificates() {
           pagination={{
             clickable: true,
           }}
-          modules={[Autoplay]}
+          modules={[Pagination]}
           className="mySwiper"
         >
           {acfData?.certificates.map((certificates_icon, index) => (
-            <SwiperSlide key={index} className="swiper-slide">
+            <SwiperSlide key={index} className="swiper-slide pb-14">
               <a
                 href="https://aep.tdd.mybluehost.me"
                 target="_blank"

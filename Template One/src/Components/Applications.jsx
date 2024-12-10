@@ -6,18 +6,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { AcfContext } from "../Page/Home";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 
 export default function Applications() {
   const acfData = useContext(AcfContext);
   console.log("Applications", acfData);
   return (
-    <div className="mt-[20px] w-full flex flex-col justify-between items-start gap-[10px]">
+    <div className="mt-[20px]  w-full flex flex-col justify-between items-start gap-[10px]">
       <div className="w-full mt-[10px]">
         <Swiper
           spaceBetween={10}
           loop={true}
-          slidesPerView={4}
+          slidesPerView={2}
           breakpoints={{
             500: {
               slidesPerView: 2,
@@ -36,11 +36,11 @@ export default function Applications() {
           pagination={{
             clickable: true,
           }}
-          modules={[Autoplay]}
+          modules={[Navigation, Pagination]}
           className="mySwiper"
         >
           {acfData?.applications_boxes.map((box, index) => (
-            <SwiperSlide key={index} className="swiper-slide">
+            <SwiperSlide key={index} className="swiper-slide pb-14">
               <a
                 href="https://aep.tdd.mybluehost.me"
                 target="_blank"

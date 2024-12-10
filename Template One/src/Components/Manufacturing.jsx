@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { AcfContext } from "../Page/Home";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 export default function Manufacturing() {
   const acfData = useContext(AcfContext);
   console.log("Manufacturing", acfData);
@@ -16,7 +16,7 @@ export default function Manufacturing() {
         <Swiper
           spaceBetween={10}
           loop={true}
-          slidesPerView={4}
+          slidesPerView={2}
           breakpoints={{
             500: {
               slidesPerView: 2,
@@ -36,11 +36,11 @@ export default function Manufacturing() {
             clickable: true,
           }}
           //   navigation={true}
-          modules={[Autoplay]}
+          modules={[Pagination]}
           className="mySwiper"
         >
           {acfData?.manufacturing_box.map((box, index) => (
-            <SwiperSlide key={index} className="swiper-slide ">
+            <SwiperSlide key={index} className="swiper-slide pb-14 ">
               <div className="swiper-slide-container cursor-grab flex flex-col gap-[10px] items-center justify-between h-full">
                 <img
                   src={box?.box_image}

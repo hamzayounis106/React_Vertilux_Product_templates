@@ -29,33 +29,35 @@ export default function Home() {
   return (
     <AcfContext.Provider value={acfData}>
       <div className="w-full flex justify-center items-center mb-10">
-        <div className="flex flex-col max-w-[1140px] justify-center items-center gap-10 w-full">
+        <div className="flex flex-col lg:max-w-[1140px] justify-center items-center gap-5 w-full">
           <Header />
           <Gallery />
-          <HeadingBar heading="TECHNICAL PROPERTIES" />
+          <div className="p-[20px] w-[100%] ">
+            <HeadingBar heading="TECHNICAL PROPERTIES" />
+          </div>
           <TechnicalProperties />
-          <div className="w-full flex justify-between items-stretch">
-            <div className="p-[20px] w-1/2">
+          <div className="w-full flex md:flex-row flex-col justify-between items-stretch">
+            <div className="p-[20px] w-[100%] md:w-1/2">
               <HeadingBar heading="CARE & MAINTENANCE" />
               <CareAndMaintenance />
             </div>
-            <div className="p-[20px] w-1/2">
+            <div className="p-[20px] w-[100%] md:w-1/2">
               <HeadingBar heading="MANUFACTURING" />
               <Manufacturing />
             </div>
           </div>
-          <div className="w-full flex justify-between items-stretch">
-            <div className="p-[20px] w-1/2">
+          <div className="w-full flex md:flex-row flex-col   justify-center md:justify-between items-stretch">
+            <div className="p-[20px] w-[100%] md:w-1/2">
               <HeadingBar heading="INTERNATIONAL CERTIFICATIONS" />
               <Certificates />
             </div>
-            <div className="p-[20px] w-1/2">
+            <div className="p-[20px] w-[100%] md:w-1/2">
               <HeadingBar heading="APPLICATIONS" />
               <Applications />
             </div>
           </div>
-          <div className="w-full flex justify-between items-stretch">
-            <div className="p-[20px] w-1/2 flex justify-end items-end">
+          <div className="w-full flex md:flex-row flex-col  justify-center md:justify-between items-stretch">
+            <div className="p-[20px] w-[90%] md:w-1/2 flex justify-end items-end">
               <p className="Roboto text-[12px] text-[#7a7a7a]">
                 IMPORTANT: The values and recommendations in this card are not
                 contractual and can not be used as claim for order cancellations
@@ -66,7 +68,7 @@ export default function Home() {
                 texture.
               </p>
             </div>
-            <div className="p-[20px] w-1/2 flex flex-col justify-start items-end gap-2">
+            <div className="p-[20px] w-[90%] md:w-1/2 flex flex-col justify-start items-end gap-2">
               <img
                 className="w-[96px]"
                 src="https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-qr-icon.png"
@@ -75,7 +77,9 @@ export default function Home() {
               <h2 className="Roboto text-[#58585a] font-[400] text-[20px]">
                 vertilux.com
               </h2>
-              <p className="Roboto text-[12px] text-[#7a7a7a]">© 2024. Vertilux, Ltd. All Rights Reserved. 1st Edition</p>
+              <p className="Roboto text-[12px] text-[#7a7a7a]">
+                © 2024. Vertilux, Ltd. All Rights Reserved. 1st Edition
+              </p>
             </div>
           </div>
         </div>

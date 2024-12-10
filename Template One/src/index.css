@@ -22,3 +22,19 @@
 .swiper-button-prev:hover {
   color: #939598; 
 }
+
+/* Change the color of the active pagination bullet */
+.swiper-pagination-bullet-active {
+  background-color: #aa2d35 !important; /* Replace with your desired color */
+}
+
+/* Change the color of the inactive pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #ccc; /* Replace with your desired color */
+  opacity: 0.7; /* Optional: make them slightly transparent */
+}
+
+/* Optional: Hover effect on pagination bullets */
+.swiper-pagination-bullet:hover {
+  opacity: 1;
+}
