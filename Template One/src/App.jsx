@@ -1,9 +1,11 @@
-import React from 'react'
+import "./index.css";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Page/Home";
 
 export default function App() {
   return (
-    <div>
-      Template One
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
 }
