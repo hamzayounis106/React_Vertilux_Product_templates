@@ -22,7 +22,21 @@ export default function Home() {
 
   const { data: acfData, error, isLoading } = useFetchTemplate(9452);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) {
+    return (
+      <div className="flex flex-col justify-center items-center h-screen bg-gray-100">
+        <img
+          src="https://aep.tdd.mybluehost.me/wp-content/uploads/2023/11/logo.png"
+          alt="Site Logo"
+          className="w-32 h-auto mb-4 animate-bounce"
+        />
+        <div className="text-gray-600 font-medium text-lg animate-pulse">
+          Loading, please wait...
+        </div>
+      </div>
+    );
+  }
+  
   if (error) return <div>Error: {error.message || "An error occurred."}</div>;
 
   // Provide the acfData to children components
