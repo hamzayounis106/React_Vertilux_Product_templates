@@ -57,15 +57,17 @@ export default function Gallery() {
         >
           {acfData?.product_images.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className='w-full h-auto group flex items-center justify-center flex-col gap-2'>
+              <div className='relative w-full h-auto group '>
                 <img
                   src={product.url}
-                  alt={`Thumbnail with the id of ${product.id}`}
-                  className='w-full h-auto rounded-md cursor-pointer'
+                  alt={`Thumbnail ${product.id}`}
+                  className='w-full h-auto rounded-md'
                 />
-                <span className='text-gray-500 text-sm text-center font-semibold'>
-                  {product.id}
-                </span>
+                <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md cursor-pointer'>
+                  <span className='text-white text-sm text-center sm:text-base font-semibold'>
+                    {product.id}
+                  </span>
+                </div>
               </div>
             </SwiperSlide>
           ))}
@@ -109,16 +111,17 @@ export default function Gallery() {
         >
           {acfData?.charging_Solution.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className='w-full h-auto group flex items-center justify-center flex-col gap-2'>
+              <div className='relative w-full h-auto group '>
                 <img
                   src={product.url}
-                  alt={`Thumbnail with the id of ${product.id}`}
-                  className='w-full h-auto rounded-md cursor-pointer'
+                  alt={`Thumbnail ${product.id}`}
+                  className='w-full h-auto rounded-md'
                 />
-                <span className='text-gray-500 text-sm text-center font-semibold'>
-                  {/* Add charging solution IDs if needed */}
-                  {product.id}{' '}
-                </span>
+                <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md cursor-pointer'>
+                  <span className='text-white text-sm text-center sm:text-base font-semibold'>
+                    {product.id}
+                  </span>
+                </div>
               </div>
             </SwiperSlide>
           ))}

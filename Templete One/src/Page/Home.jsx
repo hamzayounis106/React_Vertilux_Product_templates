@@ -69,7 +69,7 @@ export default function Home() {
             </h1>
             <Gallery />
           </div>
-          <div className='w-full lg:w-1/4 bg-gray-100  rounded-md'>
+          <div className='w-full lg:w-1/4   rounded-md'>
             <AluminumSideBar />
           </div>
         </div>

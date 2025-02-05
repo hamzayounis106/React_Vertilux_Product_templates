@@ -3,6 +3,10 @@ import Gallery from '../Components/Gallery';
 import AluminumSideBar from '../Components/AluminumSideBar';
 // import { useLocation } from 'react-router-dom';
 import TabbedInterface from '../Components/TabbedInterface';
+import HeadingBar from '../Components/HeadingBar';
+import Certificates from '../Components/Certificates';
+import Applications from '../Components/Applications';
+import { FaExclamationTriangle } from 'react-icons/fa';
 
 export const AcfContext = createContext();
 
@@ -58,12 +62,7 @@ export default function Home() {
         url: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800MABUSBC.jpg',
       },
     ],
-    // productsIds: [
-    //   { name: '0-154-TU-20021' },
-    //   { name: '0-154-TU-20021' },
-    //   { name: '0-154-TU-20021' },
-    //   { name: '0-154-TU-20021' },
-    // ],
+
     technical_specs: {
       torque: '1.1 Nm',
       speed: '20-25-30 rpm',
@@ -127,6 +126,42 @@ export default function Home() {
       },
     ],
     pdf: '/DummyPdf.pdf',
+    applications_boxes: [
+      {
+        application_name: 'Roller Shades',
+        application_image:
+          'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/Aplications_64x64px-01.png',
+      },
+      {
+        application_name: 'Indoor Use Only',
+        application_image:
+          'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-11-icon.png',
+      },
+      {
+        application_name: 'Cord Safe Solutions',
+        application_image:
+          'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/Aplications_64x64px-19.png',
+      },
+      {
+        application_name: 'Vertical Blinds',
+        application_image:
+          'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/Aplications_64x64px-07.png',
+      },
+      {
+        application_name: 'Cellular Shades',
+        application_image:
+          'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/Aplications_64x64px-08.png',
+      },
+    ],
+    certificates: [
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/Allergy_Friendly_1736_300x193px.png',
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/Logo_Prop_65_compliant_fullcolor.png',
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/logo_USGBC.png',
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/logo_aitex.png',
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/logo_vertilux_warranty_5years.png',
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/logo_vertilux_warranty_10years.png',
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-9-icon.png',
+    ],
   };
 
   return (
@@ -139,6 +174,29 @@ export default function Home() {
             </h1>
             <Gallery />
             <TabbedInterface />
+
+            <div className='w-full flex md:flex-row flex-col   justify-center md:justify-between items-stretch'>
+              <div className='p-[20px] w-[100%] md:w-1/2'>
+                <HeadingBar heading='INTERNATIONAL CERTIFICATIONS' />
+                <Certificates />
+              </div>
+              <div className='p-[20px] w-[100%] md:w-1/2'>
+                <HeadingBar heading='ACCESSORIES' />
+                <Applications />
+              </div>
+            </div>
+            <div className='flex items-center justify-center gap-4 text-'>
+              <FaExclamationTriangle className='h-full w-1/2 text-[#b71f39]' />
+              <p className='text-gray-500'>
+                IMPORTANT: The values and recommendations in this card are not
+                contractual and can not be used as claim for order cancellations
+                or returns. This technical data may vary at any time without
+                previous notice. Color samples may not necessarily be an exact
+                match of the material to be used to produce your order. Returns
+                will not be accepted due to minor variations of color or
+                texture.
+              </p>
+            </div>
           </div>
           <div className='w-full lg:w-1/4 bg-white  rounded-md'>
             <AluminumSideBar />

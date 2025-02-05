@@ -12,7 +12,9 @@ export default function TechnicalTab({ technicalSpecs, pdfLink }) {
         ))}
       </div>
       <a
-        href={pdfLink}
+        href={
+          'https://s3.amazonaws.com/vertilux-website/cabinet_files/files/000/002/075/original/TS_6800MB25B01.pdf'
+        }
         target='_blank'
         rel='noopener noreferrer'
         className='mt-8 flex items-center justify-center gap-2 bg-[#b71f39] text-white py-2 rounded hover:bg-[#b63046] transition-colors text-sm w-56 mx-auto'

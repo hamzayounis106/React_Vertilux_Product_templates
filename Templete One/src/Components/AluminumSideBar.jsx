@@ -31,21 +31,21 @@ const AluminumSideBar = () => {
       <h1 className='text-2xl'>General Information</h1>
       <main className='my-12 flex  flex-col gap-y-4'>
         <div className='flex items-center gap-4'>
-          <FaBarcode className='text-red-600' />
+          <FaBarcode className='text-[#b71f39]' size={'26px'} />
           <div className='text-gray-600'>
             <span className='font-semibold text-gray-800'>Item Code:</span>
             {acfData.item_code}
           </div>
         </div>
         <div className='flex items-center gap-4'>
-          <TbPackages className='text-red-600' />
+          <TbPackages className='text-[#b71f39]' size={'26px'} />
           <div className='text-gray-600'>
             <span className='font-semibold text-gray-800'>Packing Unit:</span>
             {acfData.packing_unit}
           </div>
         </div>
         <div className='flex items-center gap-4'>
-          <FaSliders className='text-red-600' />
+          <FaSliders className='text-[#b71f39]' size={'26px'} />
           <div className='text-gray-600'>
             <span className='font-semibold text-gray-800'>
               Unit of Measurement:
@@ -61,7 +61,7 @@ const AluminumSideBar = () => {
             href={socialLinks.facebook}
             target='_blank'
             rel='noopener noreferrer'
-            className='text-blue-600 hover:text-blue-700 transition-colors'
+            className='text-[#b71f39] hover:text-[#b63046] transition-colors'
           >
             <ImFacebook2 className='w-8 h-8 ' />
           </a>
@@ -69,7 +69,7 @@ const AluminumSideBar = () => {
             href={socialLinks.twitter}
             target='_blank'
             rel='noopener noreferrer'
-            className='text-sky-500 hover:text-sky-600 transition-colors'
+            className='text-[#b71f39] hover:text-[#b63046] transition-colors'
           >
             <FaTwitterSquare className='w-8 h-8' />
           </a>
@@ -77,7 +77,7 @@ const AluminumSideBar = () => {
             href={socialLinks.linkedin}
             target='_blank'
             rel='noopener noreferrer'
-            className='text-blue-700 hover:text-blue-800 transition-colors'
+            className='text-[#b71f39] hover:text-[#b63046] transition-colors'
           >
             <FaLinkedin className='w-8 h-8' />
           </a>
@@ -85,7 +85,7 @@ const AluminumSideBar = () => {
             href={socialLinks.email}
             target='_blank'
             rel='noopener noreferrer'
-            className='text-gray-600 hover:text-gray-700 transition-colors'
+            className='text-[#b71f39] hover:text-[#b63046] transition-colors'
           >
             <FaEnvelope className='w-8 h-8' />
           </a>
@@ -93,7 +93,7 @@ const AluminumSideBar = () => {
             href={socialLinks.whatsapp}
             target='_blank'
             rel='noopener noreferrer'
-            className='text-green-600 hover:text-green-700 transition-colors'
+            className='text-[#b71f39] hover:text-[#b63046] transition-colors'
           >
             <FaWhatsappSquare className='w-8 h-8' />
           </a>

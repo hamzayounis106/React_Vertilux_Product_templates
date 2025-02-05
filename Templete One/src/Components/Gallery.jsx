@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
 
@@ -54,16 +54,15 @@ export default function Gallery() {
         >
           {acfData?.product_images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className=' w-full h-auto group flex items-center justify-center flex-col gap-2'>
+              <div className='relative w-full h-auto group '>
                 <img
                   src={image}
                   alt={`Thumbnail ${index + 1}`}
-                  className='w-full h-auto rounded-md cursor-pointer'
+                  className='w-full h-auto rounded-md'
                 />
-                <div className=''>
-                  <span className='text-gray-600 text-sm  text-center font-semibold'>
+                <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md cursor-pointer'>
+                  <span className='text-white text-sm text-center sm:text-lg font-semibold'>
                     {colors[index]?.name}
-                    {console.log(colors[index]?.name)}
                   </span>
                 </div>
               </div>
