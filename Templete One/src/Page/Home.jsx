@@ -61,15 +61,15 @@ export default function Home() {
 
   return (
     <AcfContext.Provider value={acfData}>
-      <section className='max-w-6xl mx-auto px-4 my-12'>
-        <div className='w-full flex flex-col lg:flex-row gap-5'>
+      <section className='max-w-6xl mx-auto px-4   xl:pr-20 2xl:pr-4 my-12'>
+        <div className='w-full flex flex-col lg:flex-row gap-5 lg:gap-2 '>
           <div className='w-full lg:w-3/4 flex items-center justify-center lg:items-start lg:justify-start flex-col'>
             <h1 className='text-2xl md:text-3xl text-gray-500 mb-4'>
               {acfData.main_heading}
             </h1>
             <Gallery />
           </div>
-          <div className='w-full lg:w-1/4   rounded-md'>
+          <div className='w-full lg:w-1/4    rounded-md'>
             <AluminumSideBar />
           </div>
         </div>
