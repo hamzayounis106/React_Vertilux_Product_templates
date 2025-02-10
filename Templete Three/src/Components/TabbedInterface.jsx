@@ -61,7 +61,10 @@ const TabbedInterface = () => {
         )}
 
         {activeTab === 'recommended' && (
-          <RecommendedTab recommendedProducts={acfData.recommended_products} />
+          <RecommendedTab
+            recommendedProducts={acfData.recommended_products}
+            acfData={acfData}
+          />
         )}
 
         {activeTab === 'schematic' && (

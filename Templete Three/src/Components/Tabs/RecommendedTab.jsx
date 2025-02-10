@@ -1,25 +1,57 @@
-export default function RecommendedTab({ recommendedProducts }) {
+import { useActionData } from 'react-router-dom';
+import { AcfContext } from '../../Page/Home';
+
+export default function RecommendedTab({ recommendedProducts, acfData }) {
+  if (!recommendedProducts || recommendedProducts.length === 0) return null;
   return (
-    <div className='flex flex-wrap md:flex-nowrap items-center justify-center gap-3'>
-      {recommendedProducts.map((product, index) => (
-        <div
-          key={index}
-          className='flex flex-col items-center justify-center border px-2 py-4 rounded-lg'
-        >
-          <img
-            src={product.image}
-            alt={`Product ${index + 1}`}
-            className='w-48 h-48 object-contain'
-          />
-          <div className='text-center text-sm text-gray-600 font-semibold'>
-            <p>{product.data.measurement}</p>
-            <p>{product.data.tubeType}</p>
-            <p>{product.data.modelNumber}</p>
-            <p>{product.data.driveType}</p>
-            <p>{product.data.solutionNumber}</p>
-          </div>
+    <section>
+      <div className='overflow-x-auto'>
+        <table className='border-collapse'>
+          <tbody>
+            <tr className='flex gap-4  flex-wrap items-center justify-center'>
+              {recommendedProducts.map((product, index) => (
+                <td key={index} className='  rounded-md shadow-md text-center'>
+                  <img
+                    src={product.image}
+                    alt={`Product ${index + 1}`}
+                    className='w-20 h-20 object-contain mx-auto'
+                  />
+                  <p className='text-sm text-gray-600  '>
+                    {product.data.measurement}
+                  </p>
+                  <p className='text-sm text-gray-600 bg-gray-200'>
+                    {product.data.tubeType}
+                  </p>
+                  <p className='text-sm text-gray-600'>
+                    {product.data.modelNumber}
+                  </p>
+                  <p className='text-sm text-gray-600 bg-gray-200'>
+                    {product.data.driveType}
+                  </p>
+                  <p className='text-sm text-gray-600'>
+                    {product.data.solutionNumber}
+                  </p>
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <main className='my-12'>
+        <h1 className='text-[#900909] font-semibold'>Smart Solutions</h1>
+        <div className='flex '>
+          {acfData.smartSolution.map((smart) => {
+            return (
+              <div key={smart.name} className='w-60 mx-auto'>
+                <img src={smart.icon} alt='' className='w-full' />
+                <h1 className='text-center text-sm text-gray-600'>
+                  {smart.name}
+                </h1>
+              </div>
+            );
+          })}
         </div>
-      ))}
-    </div>
+      </main>
+    </section>
   );
 }

@@ -10,7 +10,7 @@ const AluminumSideBar = () => {
 
   return (
     <aside className='flex flex-col '>
-      <main className='my-12 flex  flex-col gap-y-4'>
+      <main className='my-8 flex  flex-col gap-y-4'>
         <div className='flex items-center gap-4'>
           <FaBarcode className='text-[#b71f39]' />
           <div className='text-gray-600'>
@@ -25,7 +25,7 @@ const AluminumSideBar = () => {
             {acfData.packing_unit}
           </div>
         </div>
-        <div className='flex items-center gap-4'>
+        <div className='flex items-center gap-4 '>
           <FaSliders className='text-[#b71f39]' />
           <div className='text-gray-600'>
             <span className='font-semibold text-gray-800'>
@@ -35,11 +35,11 @@ const AluminumSideBar = () => {
           </div>
         </div>
       </main>
-      <h1 className='text-[#b71f39] font-semibold'>
+      <h1 className='text-[#b71f39] font-semibold py-6 border-y-2'>
         Programming Instruction Manual
       </h1>
 
-      <main className='my-12'>
+      <main className='my-8'>
         <div className='border border-gray-300 w-60 mx-auto'>
           <img
             src={acfData.product_images[0].url}
@@ -56,7 +56,8 @@ const AluminumSideBar = () => {
           View Programming Instruction
         </a>{' '}
       </main>
-      <main className='my-12'>
+      {/* smart solution */}
+      {/* <main className='my-12'>
         <h1 className='text-[#900909] font-semibold'>Smart Solutions</h1>
         <div>
           {acfData.smartSolution.map((smart) => {
@@ -70,12 +71,37 @@ const AluminumSideBar = () => {
             );
           })}
         </div>
-      </main>
+      </main> */}
 
-      <div className='text-gray-600 '>
+      <div className='text-gray-600  border-b-2 pb-6'>
         <h1 className='mb-2'>Note:</h1>
         <p className='text-sm'>{acfData.note}</p>
       </div>
+
+      <main className='mt-6 '>
+        <h1>Applications(s)</h1>
+        <div className='flex flex-wrap gap-1'>
+          {acfData.link_icons.map((item, index) => {
+            return (
+              <div key={index} className='w-20'>
+                <a
+                  key={index}
+                  href={item.link}
+                  className='group w-20 transition-transform hover:scale-105'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <img
+                    src={item.icon}
+                    alt={`item at ${item.link}`}
+                    className='w-full'
+                  />
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      </main>
     </aside>
   );
 };

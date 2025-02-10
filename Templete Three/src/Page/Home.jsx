@@ -1,12 +1,13 @@
-import { createContext, useEffect } from 'react';
+import { createContext } from 'react';
 import Gallery from '../Components/Gallery';
 import AluminumSideBar from '../Components/AluminumSideBar';
-// import { useLocation } from 'react-router-dom';
 import TabbedInterface from '../Components/TabbedInterface';
 import HeadingBar from '../Components/HeadingBar';
 import Certificates from '../Components/Certificates';
 import Applications from '../Components/Applications';
-import { FaExclamationTriangle } from 'react-icons/fa';
+import { LuNotepadText } from 'react-icons/lu';
+import CareAndMaintenance from '../Components/CareAndMaintenance';
+import Manufacturing from '../Components/Manufacturing';
 
 export const AcfContext = createContext();
 
@@ -33,18 +34,22 @@ export default function Home() {
       {
         id: '6-800-MB-25B01',
         url: 'https://vertilux-website.s3.amazonaws.com/public/original/6800MB25B01.jpg',
+        link: 'https://pt-two-sable.vercel.app/',
       },
       {
         id: '6-800-ATCHB-02',
         url: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800ATCHB02.jpg',
+        link: 'https://pt-two-sable.vercel.app/',
       },
       {
         id: '6-800-ATCHB-06',
         url: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800ATCHB06.jpg',
+        link: 'https://pt-two-sable.vercel.app/',
       },
       {
         id: '6-800-ATESBT-6',
         url: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800ATESBT6.jpg',
+        link: 'https://pt-two-sable.vercel.app/',
       },
     ],
 
@@ -84,31 +89,42 @@ export default function Home() {
         image:
           'https://vertilux-website.s3.amazonaws.com/motorization/RecomendedTubes/0-154-TU-380XX.jpg',
         data: {
-          measurement: '1½" | 38 mm',
+          measurement: '1¾" | 45 mm',
           tubeType: 'Aluminum Tube',
-          modelNumber: '0-154-TU-32XXX',
+          modelNumber: '0-154-TU-452XX',
           driveType: 'Crown & Drive',
-          solutionNumber: '6-700-AS-25032',
+          solutionNumber: '6-700-AS-35045',
         },
       },
       {
         image:
           'https://vertilux-website.s3.amazonaws.com/motorization/RecomendedTubes/0-154-TU-380XX.jpg',
         data: {
-          measurement: '1½" | 38 mm',
-          tubeType: 'Smooth Aluminum Tube**',
-          modelNumber: '0-154-TU-38420 | 21',
+          measurement: '2" | 50 mm',
+          tubeType: 'Keyed Aluminum Tube',
+          modelNumber: '0-154-TU-5021X',
           driveType: 'Crown & Drive',
-          solutionNumber: '6-700-AS-25038',
+          solutionNumber: '6-700-AC-35K50',
         },
       },
       {
         image:
           'https://vertilux-website.s3.amazonaws.com/motorization/RecomendedTubes/0-154-TU-384XX.jpg',
         data: {
-          measurement: '1½" | 38 mm',
-          tubeType: 'Aluminum Tube**',
-          modelNumber: '0-154-TU-38420 | 21',
+          measurement: '2" | 50 mm',
+          tubeType: 'Grooved Aluminum Tube',
+          modelNumber: '0-154-TU-501XX',
+          driveType: 'Crown & Drive',
+          solutionNumber: '6-700-AS-35G50',
+        },
+      },
+      {
+        image:
+          'https://vertilux-website.s3.amazonaws.com/motorization/RecomendedTubes/0-154-TU-452XX.jpg',
+        data: {
+          measurement: '2" | 50 mm',
+          tubeType: 'Grooved Aluminum Tube',
+          modelNumber: '0-154-TU-501XX',
           driveType: 'Crown & Drive',
           solutionNumber: '6-700-AS-25038',
         },
@@ -117,9 +133,9 @@ export default function Home() {
         image:
           'https://vertilux-website.s3.amazonaws.com/motorization/RecomendedTubes/0-154-TU-452XX.jpg',
         data: {
-          measurement: '1½" | 45 mm',
-          tubeType: 'Aluminum Tube**',
-          modelNumber: '0-154-TU-38420 | 21',
+          measurement: '2" | 50 mm',
+          tubeType: 'Grooved Aluminum Tube',
+          modelNumber: '0-154-TU-501XX',
           driveType: 'Crown & Drive',
           solutionNumber: '6-700-AS-25038',
         },
@@ -162,6 +178,68 @@ export default function Home() {
       'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/12/logo_vertilux_warranty_10years.png',
       'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-9-icon.png',
     ],
+    link_icons: [
+      {
+        icon: 'https://s3.amazonaws.com/vertilux-website/applications/icons/000/000/002/original/Aplications_64x64px-07.png',
+        link: '/applications/door-frames',
+      },
+      {
+        icon: 'https://s3.amazonaws.com/vertilux-website/applications/icons/000/000/001/original/Aplications_64x64px-01.png',
+        link: '/applications/door-frames',
+      },
+
+      {
+        icon: 'https://s3.amazonaws.com/vertilux-website/applications/icons/000/000/005/original/Aplications_64x64px-02.png',
+        link: '/applications/door-frames',
+      },
+      {
+        icon: 'https://s3.amazonaws.com/vertilux-website/applications/icons/000/000/008/original/Aplications_64x64px-11.png',
+        link: '/applications/door-frames',
+      },
+      {
+        icon: 'https://s3.amazonaws.com/vertilux-website/applications/icons/000/000/004/original/Aplications_64x64px-04.png',
+        link: '/applications/door-frames',
+      },
+      {
+        icon: 'https://s3.amazonaws.com/vertilux-website/applications/icons/000/000/012/original/Aplications_64x64px-19.png',
+        link: '/applications/door-frames',
+      },
+    ],
+    care_maintenance_icons: [
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-1-icon.png',
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-2-icon.png',
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-3-icon.png',
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-4-icon.png',
+      'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-5-icon.png',
+    ],
+    text: '1. Vacuum clean for regular maintenance.\r\n2. Do not wash.\r\n3. Do not wring dry.\r\n4. Do not bleach.\r\n5. Do not dry clean nor use steam cleaning',
+    manufacturing_box: [
+      {
+        box_name: 'Can be Railroaded',
+        box_image:
+          'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-6-icon.png',
+      },
+      {
+        box_name: 'Ultrasonic Cut NOT Required',
+        box_image:
+          'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/TS_RX-Daku-7-icon.png',
+      },
+      {
+        box_name: 'dummy-1',
+        box_image:
+          'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/p_2_3.png',
+      },
+      {
+        box_name: 'dummy-2',
+        box_image:
+          'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/18.png',
+      },
+      {
+        box_name: 'dummy-3',
+        box_image:
+          'https://aep.tdd.mybluehost.me/staging/3938/wp-content/uploads/2024/11/p_3_9-removebg-preview.png',
+      },
+    ],
   };
 
   return (
@@ -173,9 +251,18 @@ export default function Home() {
               {acfData.main_heading}
             </h1>
             <Gallery />
-            <TabbedInterface />
+            <div className='w-full flex md:flex-row flex-col justify-between items-stretch mt-12'>
+              <div className='p-[20px] w-[100%] md:w-1/2'>
+                <HeadingBar heading='CARE & MAINTENANCE' />
+                <CareAndMaintenance />
+              </div>
+              <div className='p-[20px] w-[100%] md:w-1/2'>
+                <HeadingBar heading='MANUFACTURING' />
+                <Manufacturing />
+              </div>
+            </div>
 
-            <div className='w-full flex md:flex-row flex-col   justify-center md:justify-between items-stretch'>
+            <div className='w-full flex md:flex-row flex-col   justify-center md:justify-between items-stretch mt-12'>
               <div className='p-[20px] w-[100%] md:w-1/2'>
                 <HeadingBar heading='INTERNATIONAL CERTIFICATIONS' />
                 <Certificates />
@@ -185,8 +272,9 @@ export default function Home() {
                 <Applications />
               </div>
             </div>
+            <TabbedInterface />
             <div className='flex items-center justify-center gap-4 text-'>
-              <FaExclamationTriangle className='h-full w-1/2 text-[#b71f39]' />
+              <LuNotepadText className='h-1/2    w-1/2 text-[#b71f39]' />
               <p className='text-gray-500'>
                 IMPORTANT: The values and recommendations in this card are not
                 contractual and can not be used as claim for order cancellations
