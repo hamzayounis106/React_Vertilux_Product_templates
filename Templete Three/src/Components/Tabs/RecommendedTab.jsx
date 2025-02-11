@@ -1,14 +1,11 @@
-import { useActionData } from 'react-router-dom';
-import { AcfContext } from '../../Page/Home';
-
 export default function RecommendedTab({ recommendedProducts, acfData }) {
   if (!recommendedProducts || recommendedProducts.length === 0) return null;
   return (
     <section>
-      <div className='overflow-x-auto'>
+      <div className='overflow-x-auto mt-6'>
         <table className='border-collapse'>
           <tbody>
-            <tr className='flex gap-4  flex-wrap items-center justify-center'>
+            <tr className='grid grid-cols-2 sm:grid-cols-5 gap-4 items-center justify-center'>
               {recommendedProducts.map((product, index) => (
                 <td key={index} className='  rounded-md shadow-md text-center'>
                   <img
@@ -16,19 +13,19 @@ export default function RecommendedTab({ recommendedProducts, acfData }) {
                     alt={`Product ${index + 1}`}
                     className='w-20 h-20 object-contain mx-auto'
                   />
-                  <p className='text-sm text-gray-600  '>
+                  <p className='text-sm text-gray-600 p-1  '>
                     {product.data.measurement}
                   </p>
-                  <p className='text-sm text-gray-600 bg-gray-200'>
+                  <p className='text-sm text-gray-600 bg-gray-200 p-1'>
                     {product.data.tubeType}
                   </p>
-                  <p className='text-sm text-gray-600'>
+                  <p className='text-sm text-gray-600 p-1'>
                     {product.data.modelNumber}
                   </p>
-                  <p className='text-sm text-gray-600 bg-gray-200'>
+                  <p className='text-sm text-gray-600 bg-gray-200 p-1'>
                     {product.data.driveType}
                   </p>
-                  <p className='text-sm text-gray-600'>
+                  <p className='text-sm text-gray-600 p-1'>
                     {product.data.solutionNumber}
                   </p>
                 </td>
@@ -37,21 +34,6 @@ export default function RecommendedTab({ recommendedProducts, acfData }) {
           </tbody>
         </table>
       </div>
-      <main className='my-12'>
-        <h1 className='text-[#900909] font-semibold'>Smart Solutions</h1>
-        <div className='flex '>
-          {acfData.smartSolution.map((smart) => {
-            return (
-              <div key={smart.name} className='w-60 mx-auto'>
-                <img src={smart.icon} alt='' className='w-full' />
-                <h1 className='text-center text-sm text-gray-600'>
-                  {smart.name}
-                </h1>
-              </div>
-            );
-          })}
-        </div>
-      </main>
     </section>
   );
 }

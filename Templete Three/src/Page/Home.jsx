@@ -8,6 +8,8 @@ import Applications from '../Components/Applications';
 import { LuNotepadText } from 'react-icons/lu';
 import CareAndMaintenance from '../Components/CareAndMaintenance';
 import Manufacturing from '../Components/Manufacturing';
+import RecommendedTab from '../Components/Tabs/RecommendedTab';
+import SmartSolutions from '../Components/SmartSolutions';
 
 export const AcfContext = createContext();
 
@@ -27,6 +29,18 @@ export default function Home() {
       {
         icon: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800HAVTI02.jpg',
         name: 'VTi HomeMate+ App',
+      },
+      {
+        icon: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800HAVTI02.jpg',
+        name: 'VTi® Re-lion SMARTHUB Plu',
+      },
+      {
+        icon: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800HAVTI02.jpg',
+        name: 'VTi HomeMate+ Apps',
+      },
+      {
+        icon: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800HAVTI02.jpg',
+        name: 'VTi HomeMate + App',
       },
     ],
 
@@ -48,6 +62,11 @@ export default function Home() {
       },
       {
         id: '6-800-ATESBT-6',
+        url: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800ATESBT6.jpg',
+        link: 'https://pt-two-sable.vercel.app/',
+      },
+      {
+        id: '6-800-ATESBT-3',
         url: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800ATESBT6.jpg',
         link: 'https://pt-two-sable.vercel.app/',
       },
@@ -251,6 +270,18 @@ export default function Home() {
               {acfData.main_heading}
             </h1>
             <Gallery />
+            <main className='my-12'>
+              <HeadingBar heading={'Tubes'} />
+              <RecommendedTab
+                recommendedProducts={acfData.recommended_products}
+                acfData={acfData}
+              />
+            </main>
+            <main className=''>
+              <HeadingBar heading={'Smart Solutions & Power Solution'} />
+              <SmartSolutions />
+            </main>
+            <TabbedInterface />
             <div className='w-full flex md:flex-row flex-col justify-between items-stretch mt-12'>
               <div className='p-[20px] w-[100%] md:w-1/2'>
                 <HeadingBar heading='CARE & MAINTENANCE' />
@@ -261,7 +292,6 @@ export default function Home() {
                 <Manufacturing />
               </div>
             </div>
-
             <div className='w-full flex md:flex-row flex-col   justify-center md:justify-between items-stretch mt-12'>
               <div className='p-[20px] w-[100%] md:w-1/2'>
                 <HeadingBar heading='INTERNATIONAL CERTIFICATIONS' />
@@ -272,7 +302,7 @@ export default function Home() {
                 <Applications />
               </div>
             </div>
-            <TabbedInterface />
+
             <div className='flex items-center justify-center gap-4 text-'>
               <LuNotepadText className='h-1/2    w-1/2 text-[#b71f39]' />
               <p className='text-gray-500'>

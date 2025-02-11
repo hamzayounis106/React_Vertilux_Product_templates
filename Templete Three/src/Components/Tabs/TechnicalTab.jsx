@@ -21,11 +21,6 @@ export default function TechnicalTab({ technicalSpecs, pdfLink }) {
       >
         View Technical Sheet
       </a>
-      <p className='mt-2 text-sm text-gray-500'>
-        * The Weight Capacity of a motor is calculated under optimal
-        circumstances. Actual results may vary. Specifications are subject to
-        change without notice.
-      </p>
     </main>
   );
 }

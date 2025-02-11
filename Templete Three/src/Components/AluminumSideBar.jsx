@@ -79,7 +79,7 @@ const AluminumSideBar = () => {
       </div>
 
       <main className='mt-6 '>
-        <h1>Applications(s)</h1>
+        <h1 className='text-2xl mb-4'>Applications(s)</h1>
         <div className='flex flex-wrap gap-1'>
           {acfData.link_icons.map((item, index) => {
             return (
