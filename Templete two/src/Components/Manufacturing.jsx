@@ -1,18 +1,17 @@
-import React, { useContext } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useContext } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/autoplay";
-import { AcfContext } from "../Page/Home";
-import { Pagination, Autoplay } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+import { AcfContext } from '../Page/Home';
+import { Pagination } from 'swiper/modules';
 export default function Manufacturing() {
   const acfData = useContext(AcfContext);
-  console.log("Manufacturing", acfData);
   return (
-    <div className="mt-[20px] w-full flex flex-col justify-between items-start gap-[10px]">
-      <div className="w-full  mt-[10px]">
+    <div className='mt-[20px] w-full flex flex-col justify-between items-start gap-[10px]'>
+      <div className='w-full  mt-[10px]'>
         <Swiper
           spaceBetween={10}
           loop={true}
@@ -37,17 +36,17 @@ export default function Manufacturing() {
           }}
           //   navigation={true}
           modules={[Pagination]}
-          className="mySwiper"
+          className='mySwiper'
         >
           {acfData?.manufacturing_box.map((box, index) => (
-            <SwiperSlide key={index} className="swiper-slide pb-14 ">
-              <div className="swiper-slide-container cursor-grab flex flex-col gap-[10px] items-center justify-between h-full">
+            <SwiperSlide key={index} className='swiper-slide pb-14 '>
+              <div className='swiper-slide-container cursor-grab flex flex-col gap-[10px] items-center justify-between h-full'>
                 <img
                   src={box?.box_image}
                   alt={`Icon ${index + 1}`}
-                  className="swiper-slide-img w-[70px] mb-2"
+                  className='swiper-slide-img w-[70px] mb-2'
                 />
-                <p className="text-center IBM  text-[#7a7a7a] text-[17px] font-[400]">
+                <p className='text-center IBM  text-[#7a7a7a] text-[17px] font-[400]'>
                   {box?.box_name}
                 </p>
               </div>

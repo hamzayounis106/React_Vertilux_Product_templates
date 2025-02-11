@@ -1,8 +1,6 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
@@ -14,8 +12,6 @@ export default function Gallery() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const acfData = useContext(AcfContext);
 
-  console.log('Gallery', acfData?.product_images);
-
   const colors = [
     { name: 'SNOWFLAKES' },
     { name: 'OFF WHITE' },
@@ -26,7 +22,7 @@ export default function Gallery() {
   return (
     <div className='w-full flex justify-center items-center flex-col'>
       {/* Main Swiper */}
-      <div className='w-[70%]'>
+      <div className='w-[95%] mx-auto md:w-[90%] lg:w-[65%]'>
         <Swiper
           style={{
             '--swiper-navigation-color': '#fff',
@@ -35,16 +31,15 @@ export default function Gallery() {
           loop={true}
           spaceBetween={10}
           thumbs={{ swiper: thumbsSwiper }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }} // Auto sliding
-          modules={[FreeMode, Navigation, Thumbs, Autoplay]} // Add Autoplay module
+          modules={[FreeMode, Navigation, Thumbs, Autoplay]}
           className='mySwiper2 rounded-sm p-3'
         >
           {acfData?.product_images.map((image, index) => (
             <SwiperSlide key={index}>
               <img
-                src={image}
+                src={image} // Use image.url from your data structure
                 alt={`Slide ${index + 1}`}
-                className='w-full h-auto rounded-md cursor-grab'
+                className='w-full h-auto max-h-[500px] object-contain rounded-md cursor-grab'
               />
             </SwiperSlide>
           ))}
@@ -53,24 +48,33 @@ export default function Gallery() {
         {/* Thumbnails Swiper */}
         <Swiper
           onSwiper={setThumbsSwiper}
-          loop={true}
           spaceBetween={10}
-          slidesPerView={4}
+          slidesPerView={3}
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
           className='mySwiper mt-3'
+          breakpoints={{
+            640: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+            },
+          }}
         >
           {acfData?.product_images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className='relative w-full h-auto group'>
+              <div className='relative w-full pt-[100%] group'>
                 <img
-                  src={image}
+                  src={image} // Use image.url from your data structure
                   alt={`Thumbnail ${index + 1}`}
-                  className='w-full h-auto rounded-md'
+                  className='absolute top-0 left-0 w-full h-full object-cover rounded-md border'
                 />
                 <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md cursor-pointer'>
-                  <span className='text-white text-lg font-semibold'>
+                  <span className='text-white text-xs sm:text-sm md:text-base font-semibold text-center px-1'>
                     {colors[index]?.name}
                   </span>
                 </div>
