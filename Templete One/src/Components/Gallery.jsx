@@ -63,12 +63,12 @@ export default function Gallery() {
         >
           {acfData?.product_images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className='relative w-full pt-[100%] group border-b-2  '>
+              <div className='relative w-full pt-[100%] group'>
                 {' '}
                 <img
                   src={image}
                   alt={`Thumbnail ${index + 1}`}
-                  className='absolute top-0 left-0 w-full h-full object-contain rounded-md p-1 border'
+                  className='absolute top-0 left-0 w-full h-full object-contain rounded-md  border'
                 />
                 <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md cursor-pointer'>
                   <span className='text-white text-xs sm:text-sm text-center font-semibold p-1'>
