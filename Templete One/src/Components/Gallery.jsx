@@ -23,7 +23,6 @@ export default function Gallery() {
           }}
           spaceBetween={10}
           thumbs={{ swiper: thumbsSwiper }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[FreeMode, Navigation, Thumbs, Autoplay]}
           className='mySwiper2 rounded-sm p-3'
         >
