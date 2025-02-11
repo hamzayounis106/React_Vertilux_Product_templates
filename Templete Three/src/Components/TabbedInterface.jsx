@@ -3,6 +3,7 @@ import { AcfContext } from '../Page/Home';
 import TechnicalTab from './Tabs/TechnicalTab';
 import RecommendedTab from './Tabs/RecommendedTab';
 import SchematicTab from './Tabs/SchematicTab';
+import ProductListing from './ProductListing';
 
 const TabbedInterface = () => {
   const [activeTab, setActiveTab] = useState('technical');
@@ -61,10 +62,8 @@ const TabbedInterface = () => {
         )}
 
         {activeTab === 'recommended' && (
-          <RecommendedTab
-            recommendedProducts={acfData.recommended_products}
-            acfData={acfData}
-          />
+          // <RecommendedTab recommendedProducts={acfData.recommended_products} />
+          <ProductListing />
         )}
 
         {activeTab === 'schematic' && (

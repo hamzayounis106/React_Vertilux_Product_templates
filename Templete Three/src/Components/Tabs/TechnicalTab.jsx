@@ -1,4 +1,4 @@
-export default function TechnicalTab({ technicalSpecs, pdfLink }) {
+export default function TechnicalTab({ technicalSpecs }) {
   return (
     <main>
       <div className='grid sm:grid-cols-2 gap-x-12 flex-wrap '>

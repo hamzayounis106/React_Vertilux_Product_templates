@@ -274,7 +274,6 @@ export default function Home() {
               <HeadingBar heading={'Tubes'} />
               <RecommendedTab
                 recommendedProducts={acfData.recommended_products}
-                acfData={acfData}
               />
             </main>
             <main className=''>
@@ -282,6 +281,11 @@ export default function Home() {
               <SmartSolutions />
             </main>
             <TabbedInterface />
+            {/* Mobile Sidebar - Shows after TabbedInterface on mobile */}
+
+            <div className='lg:hidden w-full my-8'>
+              <AluminumSideBar />
+            </div>
             <div className='w-full flex md:flex-row flex-col justify-between items-stretch mt-12'>
               <div className='p-[20px] w-[100%] md:w-1/2'>
                 <HeadingBar heading='CARE & MAINTENANCE' />
@@ -303,8 +307,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='flex items-center justify-center gap-4 text-'>
-              <LuNotepadText className='h-1/2    w-1/2 text-[#b71f39]' />
+            <div className='flex items-center justify-center flex-col-reverse sm:flex-row gap-4 text-center sm:text-left'>
+              <LuNotepadText className='h-12 w-12 sm:h-1/2 sm:w-1/2 text-[#b71f39]' />
               <p className='text-gray-500'>
                 IMPORTANT: The values and recommendations in this card are not
                 contractual and can not be used as claim for order cancellations
@@ -316,7 +320,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className='w-full lg:w-1/4 bg-white  rounded-md'>
+          <div className='hidden lg:block w-full lg:w-1/4 bg-white rounded-md'>
             <AluminumSideBar />
           </div>
         </div>

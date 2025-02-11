@@ -1,13 +1,16 @@
-export default function RecommendedTab({ recommendedProducts, acfData }) {
+export default function RecommendedTab({ recommendedProducts }) {
   if (!recommendedProducts || recommendedProducts.length === 0) return null;
   return (
     <section>
       <div className='overflow-x-auto mt-6'>
         <table className='border-collapse'>
           <tbody>
-            <tr className='grid grid-cols-2 sm:grid-cols-5 gap-4 items-center justify-center'>
+            <tr className='grid grid-cols-2 sm:grid-cols-5 gap-4 lg:gap-[3px] items-center justify-center'>
               {recommendedProducts.map((product, index) => (
-                <td key={index} className='  rounded-md shadow-md text-center'>
+                <td
+                  key={index}
+                  className='  rounded-md shadow-md text-center text-sm'
+                >
                   <img
                     src={product.image}
                     alt={`Product ${index + 1}`}

@@ -40,7 +40,7 @@ const AluminumSideBar = () => {
       </h1>
 
       <main className='my-8'>
-        <div className='border border-gray-300 w-60 mx-auto'>
+        <div className='border border-gray-300  w-60 lg:mx-auto'>
           <img
             src={acfData.product_images[0].url}
             alt='hwlo'
@@ -51,7 +51,7 @@ const AluminumSideBar = () => {
           href={acfData.pdf}
           target='_blank'
           rel='noopener noreferrer'
-          className='mt-4 flex items-center justify-center gap-2 bg-[#B71F39] text-white px-4 py-2 rounded hover:bg-[#b63046] transition-colors  text-sm w-56 mx-auto'
+          className='mt-4 flex items-center justify-center gap-2 bg-[#B71F39] text-white px-4 py-2 rounded hover:bg-[#b63046] transition-colors  text-sm w-56 lg:mx-auto'
         >
           View Programming Instruction
         </a>{' '}
