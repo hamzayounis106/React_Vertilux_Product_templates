@@ -10,6 +10,7 @@ import CareAndMaintenance from '../Components/CareAndMaintenance';
 import Manufacturing from '../Components/Manufacturing';
 import RecommendedTab from '../Components/Tabs/RecommendedTab';
 import SmartSolutions from '../Components/SmartSolutions';
+import ControlSolutions from '../Components/ControlSolutions';
 
 export const AcfContext = createContext();
 
@@ -46,28 +47,48 @@ export default function Home() {
 
     product_images: [
       {
-        id: '6-800-MB-25B01',
-        url: 'https://vertilux-website.s3.amazonaws.com/public/original/6800MB25B01.jpg',
+        id: '6800ATCHB02',
+        url: '/ControlSolutions/6800ATCHB02.jpg',
         link: 'https://pt-two-sable.vercel.app/',
       },
       {
-        id: '6-800-ATCHB-02',
-        url: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800ATCHB02.jpg',
+        id: '6800ATCHB06',
+        url: '/ControlSolutions/6800ATCHB06.jpg',
         link: 'https://pt-two-sable.vercel.app/',
       },
       {
-        id: '6-800-ATCHB-06',
-        url: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800ATCHB06.jpg',
+        id: '6800ATDEB02',
+        url: '/ControlSolutions/6800ATDEB02.jpg',
         link: 'https://pt-two-sable.vercel.app/',
       },
       {
-        id: '6-800-ATESBT-6',
-        url: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800ATESBT6.jpg',
+        id: '6800ATDEB06',
+        url: '/ControlSolutions/6800ATDEB06.jpg',
         link: 'https://pt-two-sable.vercel.app/',
       },
       {
-        id: '6-800-ATESBT-3',
-        url: 'https://s3.amazonaws.com/vertilux-website/public/thumb/6800ATESBT6.jpg',
+        id: '6800ATESB16',
+        url: '/ControlSolutions/6800ATESB16.jpg',
+        link: 'https://pt-two-sable.vercel.app/',
+      },
+      {
+        id: '6800ATESBT6',
+        url: '/ControlSolutions/6800ATESBT6.jpg',
+        link: 'https://pt-two-sable.vercel.app/',
+      },
+      {
+        id: '6800ATPOU02',
+        url: '/ControlSolutions/6800ATPOU02.jpg',
+        link: 'https://pt-two-sable.vercel.app/',
+      },
+      {
+        id: '6800ATPOU06',
+        url: '/ControlSolutions/6800ATPOU06.jpg',
+        link: 'https://pt-two-sable.vercel.app/',
+      },
+      {
+        id: '6800ATPOU16',
+        url: '/ControlSolutions/6800ATPOU16.jpg',
         link: 'https://pt-two-sable.vercel.app/',
       },
     ],
@@ -264,65 +285,61 @@ export default function Home() {
   return (
     <AcfContext.Provider value={acfData}>
       <section className='max-w-6xl mx-auto px-4 my-12'>
-        <div className='w-full flex flex-col lg:flex-row gap-5'>
-          <div className='w-full lg:w-3/4 flex items-center justify-center lg:items-start lg:justify-start flex-col'>
-            <h1 className='text-2xl md:text-3xl text-gray-500 mb-4'>
-              {acfData.main_heading}
-            </h1>
+        <h1 className='text-2xl md:text-3xl text-gray-500 mb-4'>
+          {acfData.main_heading}
+        </h1>
+        <div className='flex justify-center flex-col lg:flex-row'>
+          <div className='lg:w-3/4'>
             <Gallery />
-            <main className='my-12'>
-              <HeadingBar heading={'Tubes'} />
-              <RecommendedTab
-                recommendedProducts={acfData.recommended_products}
-              />
-            </main>
-            <main className=''>
-              <HeadingBar heading={'Smart Solutions & Power Solution'} />
-              <SmartSolutions />
-            </main>
-            <TabbedInterface />
-            {/* Mobile Sidebar - Shows after TabbedInterface on mobile */}
-
-            <div className='lg:hidden w-full my-8'>
-              <AluminumSideBar />
-            </div>
-            <div className='w-full flex md:flex-row flex-col justify-between items-stretch mt-12'>
-              <div className='p-[20px] w-[100%] md:w-1/2'>
-                <HeadingBar heading='CARE & MAINTENANCE' />
-                <CareAndMaintenance />
-              </div>
-              <div className='p-[20px] w-[100%] md:w-1/2'>
-                <HeadingBar heading='MANUFACTURING' />
-                <Manufacturing />
-              </div>
-            </div>
-            <div className='w-full flex md:flex-row flex-col   justify-center md:justify-between items-stretch mt-12'>
-              <div className='p-[20px] w-[100%] md:w-1/2'>
-                <HeadingBar heading='INTERNATIONAL CERTIFICATIONS' />
-                <Certificates />
-              </div>
-              <div className='p-[20px] w-[100%] md:w-1/2'>
-                <HeadingBar heading='ACCESSORIES' />
-                <Applications />
-              </div>
-            </div>
-
-            <div className='flex items-center justify-center flex-col-reverse sm:flex-row gap-4 text-center sm:text-left'>
-              <LuNotepadText className='h-12 w-12 sm:h-1/2 sm:w-1/2 text-[#b71f39]' />
-              <p className='text-gray-500'>
-                IMPORTANT: The values and recommendations in this card are not
-                contractual and can not be used as claim for order cancellations
-                or returns. This technical data may vary at any time without
-                previous notice. Color samples may not necessarily be an exact
-                match of the material to be used to produce your order. Returns
-                will not be accepted due to minor variations of color or
-                texture.
-              </p>
-            </div>
           </div>
-          <div className='hidden lg:block w-full lg:w-1/4 bg-white rounded-md'>
+          <div className=' w-full lg:w-1/4 bg-white rounded-md'>
             <AluminumSideBar />
           </div>
+        </div>
+        <ControlSolutions />
+        <main className='my-12'>
+          <HeadingBar heading={'Tubes'} />
+          <RecommendedTab recommendedProducts={acfData.recommended_products} />
+        </main>
+        <main className=''>
+          <HeadingBar heading={'Smart Solutions & Power Solution'} />
+          <SmartSolutions />
+        </main>
+        <TabbedInterface />
+        {/* Mobile Sidebar - Shows after TabbedInterface on mobile */}
+        {/* <div className='lg:hidden w-full my-8'>
+              <AluminumSideBar />
+            </div> */}
+        <div className='w-full flex md:flex-row flex-col justify-between items-stretch mt-12'>
+          <div className='p-[20px] w-[100%] md:w-1/2'>
+            <HeadingBar heading='CARE & MAINTENANCE' />
+            <CareAndMaintenance />
+          </div>
+          <div className='p-[20px] w-[100%] md:w-1/2'>
+            <HeadingBar heading='MANUFACTURING' />
+            <Manufacturing />
+          </div>
+        </div>
+        <div className='w-full flex md:flex-row flex-col   justify-center md:justify-between items-stretch mt-12'>
+          <div className='p-[20px] w-[100%] md:w-1/2'>
+            <HeadingBar heading='INTERNATIONAL CERTIFICATIONS' />
+            <Certificates />
+          </div>
+          <div className='p-[20px] w-[100%] md:w-1/2'>
+            <HeadingBar heading='ACCESSORIES' />
+            <Applications />
+          </div>
+        </div>
+        <div className='flex items-center justify-center flex-col-reverse sm:flex-row gap-4 text-center sm:text-left'>
+          <LuNotepadText className='h-12 w-12 sm:h-1/2 sm:w-1/2 text-[#b71f39]' />
+          <p className='text-gray-500'>
+            IMPORTANT: The values and recommendations in this card are not
+            contractual and can not be used as claim for order cancellations or
+            returns. This technical data may vary at any time without previous
+            notice. Color samples may not necessarily be an exact match of the
+            material to be used to produce your order. Returns will not be
+            accepted due to minor variations of color or texture.
+          </p>
         </div>
       </section>
     </AcfContext.Provider>
