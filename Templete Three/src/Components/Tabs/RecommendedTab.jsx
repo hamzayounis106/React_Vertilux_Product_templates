@@ -2,10 +2,10 @@ export default function RecommendedTab({ recommendedProducts }) {
   if (!recommendedProducts || recommendedProducts.length === 0) return null;
   return (
     <section>
-      <div className='overflow-x-auto mt-6'>
-        <table className='border-collapse'>
+      <div className='overflow-x-auto mt-6  '>
+        <table className='border-collapse w-full'>
           <tbody>
-            <tr className='grid grid-cols-2 sm:grid-cols-5 gap-4 lg:gap-[3px] items-center justify-center'>
+            <tr className=' grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 items-center justify-center w-full'>
               {recommendedProducts.map((product, index) => (
                 <td
                   key={index}
@@ -19,7 +19,7 @@ export default function RecommendedTab({ recommendedProducts }) {
                   <p className='text-sm text-gray-600 p-1  '>
                     {product.data.measurement}
                   </p>
-                  <p className='text-sm text-gray-600 bg-gray-200 p-1'>
+                  <p className='text-sm text-gray-600 bg-gray-200 py-1 sm:px-1 px-2'>
                     {product.data.tubeType}
                   </p>
                   <p className='text-sm text-gray-600 p-1'>

@@ -7,7 +7,7 @@ const ProductListing = () => {
 
   return (
     <div className='grid grid-cols-2 md:grid-cols-5 gap-4 mt-12'>
-      {acfData.product_images.map((product) => (
+      {acfData.control_solutions.map((product) => (
         <a
           key={product.id}
           href={product.link}

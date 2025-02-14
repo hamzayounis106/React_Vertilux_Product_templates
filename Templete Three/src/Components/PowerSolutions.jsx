@@ -7,7 +7,7 @@ import 'swiper/css/autoplay';
 import { AcfContext } from '../Page/Home';
 import { Pagination } from 'swiper/modules';
 
-export default function SmartSolutions() {
+export default function PowerSolutions() {
   const acfData = useContext(AcfContext);
 
   return (
@@ -38,7 +38,7 @@ export default function SmartSolutions() {
           modules={[Pagination]}
           className='mySwiper'
         >
-          {acfData?.smartSolution.map((care_maintenance_icon, index) => (
+          {acfData?.powerSolution.map((care_maintenance_icon, index) => (
             <SwiperSlide key={index} className='swiper-slide pb-14 '>
               <div className='swiper-slide-container cursor-grab flex justify-center'>
                 <img

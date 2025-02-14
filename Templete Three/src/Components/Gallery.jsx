@@ -8,12 +8,12 @@ export default function Gallery() {
     <div className='w-full'>
       <div className='md:w-3/4'>
         <img
-          src={acfData.product_images[0].url}
+          src={acfData.control_solutions[0].url}
           alt='Main product'
           className='w-full h-auto rounded-lg shadow-md mb-6 '
         />
       </div>
-      <div className='flex my-8 flex-wrap gap-x-12 gap-y-4 items-start justify-start text-2xl '>
+      <div className='flex my-8 flex-wrap gap-x-12 gap-y-4  sm:items-start items-center justify-center sm:justify-start text-2xl '>
         <a
           href={'/TechnicalSheet.pdf'}
           target='_blank'

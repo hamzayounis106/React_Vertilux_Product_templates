@@ -13,8 +13,8 @@ const ControlSolutions = () => {
 
         {/* Related Products Grid */}
         <div className='grid grid-cols-2 md:grid-cols-5 gap-4 mt-12'>
-          {acfData.product_images
-            .slice(1, acfData.product_images.length)
+          {acfData.control_solutions
+            .slice(1, acfData.control_solutions.length)
             .map((product) => (
               <a
                 key={product.id}

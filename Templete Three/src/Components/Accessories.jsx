@@ -6,9 +6,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { AcfContext } from '../Page/Home';
-import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 
-export default function Applications() {
+export default function Accessories() {
   const acfData = useContext(AcfContext);
   return (
     <div className='mt-[20px]  w-full flex flex-col justify-between items-start gap-[10px]'>
@@ -38,7 +38,7 @@ export default function Applications() {
           modules={[Navigation, Pagination]}
           className='mySwiper'
         >
-          {acfData?.applications_boxes.map((box, index) => (
+          {acfData?.accessories.map((box, index) => (
             <SwiperSlide key={index} className='swiper-slide pb-14'>
               <a
                 href='https://aep.tdd.mybluehost.me'
@@ -48,7 +48,7 @@ export default function Applications() {
               >
                 <div className='swiper-slide-container cursor-grab flex flex-col gap-[10px] items-center justify-between h-full'>
                   <img
-                    src={box?.application_image}
+                    src={box?.icon}
                     alt={`Icon ${index + 1}`}
                     className='swiper-slide-img w-[70px] mb-2'
                   />
