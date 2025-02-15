@@ -12,24 +12,27 @@ export default function RecommendedTab({ recommendedProducts }) {
                   className='  rounded-md shadow-md text-center text-sm'
                 >
                   <img
-                    src={product.image}
+                    src={product?.image}
                     alt={`Product ${index + 1}`}
                     className='w-20 h-20 object-contain mx-auto'
                   />
                   <p className='text-sm text-gray-600 p-1  '>
-                    {product.data.measurement}
+                    {product?.data?.measurement}
                   </p>
                   <p className='text-sm text-gray-600 bg-gray-200 py-1 sm:px-1 px-2'>
-                    {product.data.tubeType}
+                    {product?.data?.tubeType}
                   </p>
                   <p className='text-sm text-gray-600 p-1'>
-                    {product.data.modelNumber}
+                    {product?.data?.modelNumber}
                   </p>
                   <p className='text-sm text-gray-600 bg-gray-200 p-1'>
-                    {product.data.driveType}
+                    {product?.data?.driveType}
                   </p>
                   <p className='text-sm text-gray-600 p-1'>
-                    {product.data.solutionNumber}
+                    {product?.data?.solutionNumber}
+                  </p>
+                  <p className='text-sm text-gray-600 p-1'>
+                    {product?.data?.solutionNumberOptional}
                   </p>
                 </td>
               ))}

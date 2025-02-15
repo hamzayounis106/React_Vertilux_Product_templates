@@ -137,6 +137,7 @@ export default function Home() {
           modelNumber: '0-154-TU-5021X',
           driveType: 'Crown & Drive',
           solutionNumber: '6-700-AC-35K50',
+          solutionNumberOptional: '6-700-AC-35K50',
         },
       },
       {
@@ -157,6 +158,7 @@ export default function Home() {
           modelNumber: '0-154-TU-630XX',
           driveType: 'Crown & Drive',
           solutionNumber: '6-700-AS-25038',
+          solutionNumberOptional: '6-700-AC-35K50',
         },
       },
       {
@@ -167,6 +169,7 @@ export default function Home() {
           modelNumber: '0-154-TU-830XX',
           driveType: 'Crown & Drive',
           solutionNumber: '6-700-AS-25038',
+          solutionNumberOptional: '6-700-AC-35K50',
         },
       },
     ],
@@ -312,7 +315,7 @@ export default function Home() {
             <Manufacturing />
           </div>
         </div> */}
-        <div className='w-full flex md:flex-row flex-col   justify-center md:justify-between items-stretch mt-12'>
+        <div className='w-full flex md:flex-row flex-col   justify-center md:justify-between items-stretch mt-6'>
           <div className='p-[20px] w-[100%] md:w-1/2'>
             <HeadingBar heading='INTERNATIONAL CERTIFICATIONS' />
             <Certificates />

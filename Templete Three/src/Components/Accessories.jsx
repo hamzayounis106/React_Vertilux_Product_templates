@@ -50,7 +50,7 @@ export default function Accessories() {
                   <img
                     src={box?.icon}
                     alt={`Icon ${index + 1}`}
-                    className='swiper-slide-img w-[70px] mb-2'
+                    className='swiper-slide-img w-[90px] h-[90px] border-2 mb-2'
                   />
                   <p className='text-center IBM text-[#7a7a7a] text-[17px] font-[400]'>
                     {box?.application_name}

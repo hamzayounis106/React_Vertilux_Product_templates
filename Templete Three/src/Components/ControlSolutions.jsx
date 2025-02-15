@@ -11,7 +11,6 @@ const ControlSolutions = () => {
       <section className='md:pr-12'>
         <HeadingBar heading={'Control Solutions'} />
 
-        {/* Related Products Grid */}
         <div className='grid grid-cols-2 md:grid-cols-5 gap-4 mt-12'>
           {acfData.control_solutions
             .slice(1, acfData.control_solutions.length)

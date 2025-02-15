@@ -50,7 +50,7 @@ export default function Certificates() {
                   <img
                     src={certificates_icon}
                     alt={`Certificate ${index + 1}`}
-                    className='swiper-slide-img w-[90px]'
+                    className='swiper-slide-img w-[90px] h-[90px] border-2'
                   />
                 </div>
               </a>

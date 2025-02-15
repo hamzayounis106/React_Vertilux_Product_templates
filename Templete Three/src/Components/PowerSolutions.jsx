@@ -44,7 +44,7 @@ export default function PowerSolutions() {
                 <img
                   src={care_maintenance_icon.icon}
                   alt={`Icon ${index + 1}`}
-                  className='swiper-slide-img w-[70px] h-[70px]'
+                  className='swiper-slide-img w-[90px] h-[90px] border-2'
                 />
               </div>
             </SwiperSlide>
