@@ -45,12 +45,20 @@ export default function ColorTable() {
           {colors.map((color) => (
             <>
               <tr key={color.id}>
-                <td className='w-[50%] text-[#58585A] capitalize md:text-[18px] text-[16px] font-[600] IBM'>
+                <td className='w-[50%] text-[rgb(88,88,90)] capitalize md:text-[18px] text-[16px] font-[600] IBM'>
                   {color.name}
                 </td>
-                <td className='text-[#A6A6A8] w-[50%] md:text-[18px] text-[16px] font-[400] IBM'>
-                  {color.code}
-                </td>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2'>
+                  <td className='text-[#A6A6A8] md:text-[18px] text-[16px] font-[400] IBM'>
+                    {color.code}
+                  </td>{' '}
+                  <td className='text-[#A6A6A8] md:text-[18px] text-[16px] font-[400] IBM'>
+                    {color.code}
+                  </td>
+                  <td className='text-[#A6A6A8]  md:text-[18px] text-[16px] font-[400] IBM'>
+                    {color.code}
+                  </td>
+                </div>
               </tr>
               <tr>
                 <td className='h-[10px]'></td>

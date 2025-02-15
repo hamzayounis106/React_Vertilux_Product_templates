@@ -1,4 +1,4 @@
-import React, { createContext, useEffect } from 'react';
+import { createContext, useEffect } from 'react';
 import useFetchTemplate from '../Hook/useFetchTemplate';
 import { Link, useLocation } from 'react-router-dom';
 import Header from '../Components/Header';
@@ -57,9 +57,9 @@ export default function Home() {
           <div className='flex md:justify-start justify-center w-[95%] mt-7'>
             <Link
               to='#'
-              className='flex gap-3 items-center font-medium text-[#aa2d35] group'
+              className='flex px-4 py-2 gap-3 items-center font-medium bg-[#aa2d35] group text-white'
             >
-              View Details{' '}
+              View Details
               <span>
                 <FaCircleArrowRight className='group-hover:translate-x-2 transition-all duration-500' />
               </span>

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -6,17 +6,26 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import 'swiper/css/autoplay';
-import { AcfContext } from '../Page/Home';
 
 export default function Gallery() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const acfData = useContext(AcfContext);
-
+  // const acfData = useContext(AcfContext);
+  // display the data by commening this
+  const product_images = [
+    '/Color Swatches/0-002-11-01104 - White.jpg',
+    '/Color Swatches/0-002-11-02104 - Ivory.jpg',
+    '/Color Swatches/0-002-11-03104 - Silver.jpg',
+    '/Color Swatches/0-002-11-04104 - Stone.jpg',
+    '/Color Swatches/0-002-11-05104 - Buckwheat.jpg',
+    '/Color Swatches/0-002-11-06104 - Asphalt.jpg',
+  ];
   const colors = [
-    { name: 'SNOWFLAKES' },
-    { name: 'OFF WHITE' },
-    { name: 'BISQUE' },
-    { name: 'BLACK' },
+    { name: 'White' },
+    { name: 'Ivory' },
+    { name: 'Silver' },
+    { name: 'Stone' },
+    { name: 'Buck Wheat' },
+    { name: 'Asphalt' },
   ];
 
   return (
@@ -34,12 +43,12 @@ export default function Gallery() {
           modules={[FreeMode, Navigation, Thumbs, Autoplay]}
           className='mySwiper2 rounded-sm p-3'
         >
-          {acfData?.product_images.map((image, index) => (
+          {product_images.map((image, index) => (
             <SwiperSlide key={index}>
               <img
                 src={image} // Use image.url from your data structure
                 alt={`Slide ${index + 1}`}
-                className='w-full h-auto max-h-[500px] object-contain rounded-md cursor-grab'
+                className='w-full h-auto max-h-[500px]  rounded-md cursor-grab object-cover   border'
               />
             </SwiperSlide>
           ))}
@@ -65,9 +74,9 @@ export default function Gallery() {
             },
           }}
         >
-          {acfData?.product_images.map((image, index) => (
+          {product_images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className='relative w-full pt-[100%] group'>
+              <div className='relative w-full pt-[100%] group '>
                 <img
                   src={image} // Use image.url from your data structure
                   alt={`Thumbnail ${index + 1}`}
