@@ -5,11 +5,11 @@ export default function RecommendedTab({ recommendedProducts }) {
       <div className='overflow-x-auto mt-6  '>
         <table className='border-collapse w-full'>
           <tbody>
-            <tr className=' grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 items-center justify-center w-full'>
+            <tr className=' grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 items-center justify-center w-full py-4'>
               {recommendedProducts.map((product, index) => (
                 <td
                   key={index}
-                  className='  rounded-md shadow-md text-center text-sm'
+                  className=' h-full rounded-md shadow-md text-center text-sm'
                 >
                   <img
                     src={product?.image}

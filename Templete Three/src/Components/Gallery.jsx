@@ -3,12 +3,12 @@ import { AcfContext } from '../Page/Home';
 
 export default function Gallery() {
   const acfData = useContext(AcfContext);
-
+  console.log('acfData', acfData);
   return (
     <div className='w-full'>
-      <div className='md:w-3/4'>
+      <div className='md:w-[90%]'>
         <img
-          src={acfData.control_solutions[0].url}
+          src={'/mainImage.jpg'}
           alt='Main product'
           className='w-full h-auto rounded-lg shadow-md mb-6 '
         />
