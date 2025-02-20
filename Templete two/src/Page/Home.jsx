@@ -1,6 +1,6 @@
 import { createContext, useEffect } from 'react';
 import useFetchTemplate from '../Hook/useFetchTemplate';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Header from '../Components/Header';
 import Gallery from '../Components/Gallery';
 import HeadingBar from '../Components/HeadingBar';
@@ -10,7 +10,6 @@ import Manufacturing from '../Components/Manufacturing';
 import Applications from '../Components/Applications';
 import Certificates from '../Components/Certificates';
 import ColorTable from '../Components/ColorTable';
-import { FaCircleArrowRight } from 'react-icons/fa6';
 
 export const AcfContext = createContext();
 
@@ -55,15 +54,16 @@ export default function Home() {
           </div>
           <TechnicalProperties />
           <div className='flex md:justify-start justify-center w-[95%] mt-7'>
-            <Link
-              to='#'
+            <a
+              href='/item.pdf'
               className='flex px-4 py-2 gap-3 items-center font-medium bg-[#aa2d35] group text-white'
+              target='_'
             >
               View Details
-              <span>
+              {/* <span>
                 <FaCircleArrowRight className='group-hover:translate-x-2 transition-all duration-500' />
-              </span>
-            </Link>
+              </span> */}
+            </a>
           </div>
           <div className='w-full flex md:flex-row flex-col justify-between items-stretch'>
             <div className='p-[20px] w-[100%] md:w-1/2'>
